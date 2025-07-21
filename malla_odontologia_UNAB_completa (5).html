@@ -1,0 +1,102 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Malla Curricular Odontología UNAB</title>
+    <script type="module">
+        import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+        mermaid.initialize({ startOnLoad: true });
+    </script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 2em;
+            background-color: #f8f9fa;
+        }
+        h1 {
+            text-align: center;
+            color: #004080;
+        }
+        .mermaid {
+            background: #ffffff;
+            padding: 1em;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>Malla Curricular Odontología UNAB</h1>
+    <div class="mermaid">
+        graph TD
+            %% 1° Semestre
+            BIOL130["Biología Celular<br>1º Sem"] 
+            CEGHC11["Habilidades Comunicativas<br>1º Sem"]
+            CFIS100["Física Aplicada<br>1º Sem"]
+            MORF100["Anatomía Humana Normal y Embriología<br>1º Sem"]
+            ODOT101["Introducción a la Odontología<br>1º Sem"]
+
+            %% 2° Semestre
+            BIOL146["Genética Molecular Humana<br>2º Sem"]
+            ING119["Inglés I<br>2º Sem"]
+            MORF200["Anatomía Aplicada<br>2º Sem"]
+            MORF201["Histología General<br>2º Sem"]
+            ODOT201["Introducción a la Clínica<br>2º Sem"]
+            QUIM118["Química General e Inorgánica<br>2º Sem"]
+
+            %% 3° Semestre
+            BIOL164["Bioquímica General<br>3º Sem"]
+            BIOL172["Fisiología<br>3º Sem"]
+            BIOL173["Lab. de Fisiología<br>3º Sem"]
+            BIOL252["Microbiología General<br>3º Sem"]
+            ING129["Inglés II<br>3º Sem"]
+            MORF300["Histología Oral<br>3º Sem"]
+            ODOT301["Biomateriales Dentales<br>3º Sem"]
+            ODOT302["Patología General I<br>3º Sem"]
+
+            %% 4° Semestre
+            BIOL254["Microbiología Oral<br>4º Sem"]
+            ING239["Inglés III<br>4º Sem"]
+            CEGCT12["Razonamiento Científico e Informático<br>4º Sem"]
+            ODOT401["Bioquímica Oral<br>4º Sem"]
+            ODOT402["Patología General II<br>4º Sem"]
+            ODOT403["Promoción y Educación en Salud<br>4º Sem"]
+
+            %% 5° Semestre
+            FARM161["Farmacología I<br>5º Sem"]
+            ING249["Inglés IV<br>5º Sem"]
+            ODOT501["Patología Dentomaxilar<br>5º Sem"]
+            ODOT502["Imagenología<br>5º Sem"]
+            ODOT503["Cirugía Bucal Básica<br>5º Sem"]
+            ODOT504["Fisiología Oral y Oclusión<br>5º Sem"]
+            ODOT505["Preclínico Integrado<br>5º Sem"]
+
+            %% 6° Semestre
+            FARM162["Farmacología II<br>6º Sem"]
+            ODOT602["Cariología<br>6º Sem"]
+
+            %% Relaciones
+            BIOL130 --> BIOL146
+            BIOL130 --> MORF200
+            MORF100 --> MORF200
+            MORF100 --> MORF201
+            MORF201 --> MORF300
+            ODOT101 --> ODOT201
+            QUIM118 --> ODOT301
+            BIOL146 --> BIOL164
+            BIOL164 --> BIOL254
+            BIOL172 --> BIOL173
+            MORF300 --> ODOT302
+            BIOL254 --> ODOT401
+            ODOT302 --> ODOT402
+            ODOT403 --> ODOT505
+            FARM161 --> FARM162
+            ODOT301 --> ODOT505
+            ODOT302 --> ODOT501
+            ODOT502 --> ODOT503
+            ODOT503 --> ODOT602
+    </div>
+</body>
+</html>
